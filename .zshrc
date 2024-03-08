@@ -178,3 +178,6 @@ alias ex="exa -F --group-directories-first -l -h --icons -a --sort=changed -r"
 # alias for walk
 alias lk="lk --icons"
 alias fd=fdfind
+
+export http_proxy="http://127.0.0.1:9220"
+export https_proxy="http://127.0.0.1:9220"
