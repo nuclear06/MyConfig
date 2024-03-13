@@ -166,3 +166,9 @@ bind '|' display-panes \; split-window -h -c "#{pane_current_path}"
 # -: splite -h
 unbind '-'
 bind '-' display-panes \; split-window -v -c "#{pane_current_path}"
+
+
+unbind 'R'
+bind R copy
+unbind r
+bind r copy-mode
