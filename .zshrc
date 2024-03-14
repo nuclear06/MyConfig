@@ -187,3 +187,4 @@ export https_proxy="http://127.0.0.1:9220"
 
 # Created by `pipx` on 2024-03-13 05:36:21
 export PATH="$PATH:/home/saniter/.local/bin"
+alias lzd='lazydocker'
