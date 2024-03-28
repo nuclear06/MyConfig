@@ -155,8 +155,8 @@ export LANG=zh_CN.UTF-8
 
 
 export EDITOR=vim
-# export JAVA_HOME=/usr/local/java/jdk-17.0.1
-export JAVA_HOME=/usr/local/java/jdk1.8.0_351
+export JAVA_HOME=/usr/local/java/jdk-17.0.1
+# export JAVA_HOME=/usr/local/java/jdk1.8.0_351
 export CLASSPATH=.:${JAVA_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 export CUDA_VISIBLE_DEVICES=0
@@ -188,3 +188,5 @@ export https_proxy="http://127.0.0.1:9220"
 # Created by `pipx` on 2024-03-13 05:36:21
 export PATH="$PATH:/home/saniter/.local/bin"
 alias lzd='lazydocker'
+
+alias sudo='sudo ' # fix sudo alias
