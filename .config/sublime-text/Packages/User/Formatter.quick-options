@@ -1,0 +1,7 @@
+{
+    "debug": "true",
+    "layout": "single",
+    "format_on_save": [
+        "jsbeautifier"
+    ]
+}

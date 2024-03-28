@@ -1,0 +1,9 @@
+{
+	"ignored_packages":
+	[
+	],
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?（《【，。—·…！￥：；‘“”’？、】》）",
+	"index_files": true,
+	"theme": "auto",
+	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+}
