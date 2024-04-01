@@ -1,5 +1,9 @@
 [
     {
+        "args":
+        {
+            "cwd": "${file_path:${folder}}"
+        },
         "command": "toggle_terminus_panel",
         "keys":
         [
@@ -316,5 +320,5 @@
         [
             "ctrl+alt+5"
         ]
-    }
+    },
 ]
