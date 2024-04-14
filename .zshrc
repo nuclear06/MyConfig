@@ -171,6 +171,9 @@ export GOPROXY="https://goproxy.io,https://mirrors.aliyun.com/goproxy/,direct"
 export GOSUMDB="sum.golang.org"
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+export PATH=/usr/local/Node.js/node-v18.18.2-linux-x64/bin:$PATH
 alias cls=clear
 alias e="exa -F --group-directories-first --icons --sort=changed -r"
 alias ex="exa -F --group-directories-first -l -h --icons -a --sort=changed -r"

@@ -2,6 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"BracketHighlighter",
 	],
 	"installed_packages":
 	[
@@ -14,10 +15,18 @@
 		"FileDiffs",
 		"Formatter",
 		"JsFormat",
+		"LSP",
+		"LSP-file-watcher-chokidar",
+		"LSP-json",
+		"LSP-pylsp",
+		"LSP-pyright",
 		"MarkdownEditing",
+		"MarkdownPreview",
 		"Package Control",
 		"Pretty JSON",
 		"Pretty YAML",
+		"ProjectManager",
+		"SideBarEnhancements",
 		"Terminus",
 		"Word Count",
 	],

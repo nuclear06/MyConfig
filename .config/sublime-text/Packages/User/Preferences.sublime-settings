@@ -1,6 +1,7 @@
 {
 	"ignored_packages":
 	[
+		"BracketHighlighter",
 	],
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?（《【，。—·…！￥：；‘“”’？、】》）",
 	"index_files": true,
