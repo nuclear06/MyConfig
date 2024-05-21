@@ -193,3 +193,8 @@ export PATH="$PATH:/home/saniter/.local/bin"
 alias lzd='lazydocker'
 
 alias sudo='sudo ' # fix sudo alias
+alias sduo='sudo ' 
+alias sodu='sudo '
+alias sdu='sudo '
+alias sud='sudo '
+
