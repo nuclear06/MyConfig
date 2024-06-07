@@ -3,6 +3,7 @@
 	"in_process_packages":
 	[
 		"BracketHighlighter",
+		"LSP-pyright",
 	],
 	"installed_packages":
 	[

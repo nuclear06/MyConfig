@@ -102,23 +102,24 @@ zstyle ':omz:update' frequency 13
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-        aliases
-        alias-finder
-        docker
-        docker-compose
-        git
-        dirhistory
-        emoji-clock
-        encode64
-        fancy-ctrl-z
-        history
-        kate
-        qrcode
-        zsh-autosuggestions
-        autojump
-        zsh-syntax-highlighting
-        thefuck
-        extract
+    autoswitch_virtualenv
+    aliases
+    alias-finder
+    docker
+    docker-compose
+    git
+    dirhistory
+    emoji-clock
+    encode64
+    fancy-ctrl-z
+    history
+    kate
+    qrcode
+    zsh-autosuggestions
+    autojump
+    zsh-syntax-highlighting
+    thefuck
+    extract
 )
 [[ -s /home/saniter/.autojump/etc/profile.d/autojump.sh ]] && source /home/saniter/.autojump/etc/profile.d/autojump.sh
 
@@ -190,7 +191,7 @@ export https_proxy="http://127.0.0.1:9220"
 
 # Created by `pipx` on 2024-03-13 05:36:21
 export PATH="$PATH:/home/saniter/.local/bin"
-alias lzd='lazydocker'
+alias lz='lazydocker'
 
 alias sudo='sudo ' # fix sudo alias
 alias sduo='sudo ' 
