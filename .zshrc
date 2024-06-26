@@ -199,3 +199,5 @@ alias sodu='sudo '
 alias sdu='sudo '
 alias sud='sudo '
 
+alias asc='asciinema rec "asciinema-$(date +%Y%m%d-%H%M%S).cast"'
+
