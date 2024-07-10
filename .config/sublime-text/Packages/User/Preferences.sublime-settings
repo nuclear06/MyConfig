@@ -6,7 +6,7 @@
 		"LSP-pyright",
 	],
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?（《【，。—·…！￥：；‘“”’？、】》）",
-	"index_files": false,
+	"index_files": true,
 	"theme": "auto",
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"save_on_focus_lost": true,

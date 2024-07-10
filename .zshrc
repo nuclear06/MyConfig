@@ -102,6 +102,7 @@ zstyle ':omz:update' frequency 13
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    rsync
     autoswitch_virtualenv
     aliases
     alias-finder
@@ -120,6 +121,7 @@ plugins=(
     zsh-syntax-highlighting
     thefuck
     extract
+    systemd
 )
 [[ -s /home/saniter/.autojump/etc/profile.d/autojump.sh ]] && source /home/saniter/.autojump/etc/profile.d/autojump.sh
 
@@ -200,4 +202,14 @@ alias sdu='sudo '
 alias sud='sudo '
 
 alias asc='asciinema rec "asciinema-$(date +%Y%m%d-%H%M%S).cast"'
+alias lan="python /home/saniter/Programing/PycharmProjects/spider/temp/telegra.py"
+
+alias arc="aria2c -x 16 -s 16 -k 1M -j 16"
+
+
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+compinit
 
