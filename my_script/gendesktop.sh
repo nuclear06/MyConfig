@@ -2,7 +2,7 @@
 
 # 检查是否提供了至少一个参数（可执行文件的名字）
 if [ $# -lt 1 ]; then
-  echo "Usage: $0 executable_name [-n name] [-i icon_path]"
+  echo "Usage: $0 file [-n name] [-i icon_path]"
   exit 1
 fi
 
@@ -55,7 +55,7 @@ cat >"${PWD}/${desktop_name}.desktop" <<EOF
 [Desktop Entry]
 Type=Application
 Name=${desktop_name}
-Exec=${PWD}/${executable_name}
+Exec=${PWD}/${executable_name} %u
 Icon=${icon_path}
 Terminal=false
 EOF

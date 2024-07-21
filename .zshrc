@@ -178,8 +178,8 @@ export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 export PATH=/usr/local/Node.js/node-v18.18.2-linux-x64/bin:$PATH
 alias cls=clear
-alias e="exa -F --group-directories-first --icons --sort=changed -r"
-alias ex="exa -F --group-directories-first -l -h --icons -a --sort=changed -r"
+alias e="eza -F --group-directories-first --icons --sort=changed -r"
+alias ez="eza -F --group-directories-first -l -h --icons -a --sort=changed -r"
 
 # alias for walk
 alias lk="lk --icons"
@@ -194,6 +194,7 @@ export https_proxy="http://127.0.0.1:9220"
 # Created by `pipx` on 2024-03-13 05:36:21
 export PATH="$PATH:/home/saniter/.local/bin"
 alias lz='lazydocker'
+alias lg='lazygit'
 
 alias sudo='sudo ' # fix sudo alias
 alias sduo='sudo ' 
@@ -202,10 +203,10 @@ alias sdu='sudo '
 alias sud='sudo '
 
 alias asc='asciinema rec "asciinema-$(date +%Y%m%d-%H%M%S).cast"'
-alias lan="python /home/saniter/Programing/PycharmProjects/spider/temp/telegra.py"
+alias lan="python /home/saniter/Programing/VscodeProject/lanraragi/my_script/telegra.py"
 
 alias arc="aria2c -x 16 -s 16 -k 1M -j 16"
-
+alias cur="curl -sSL#O"
 
 
 autoload -Uz compinit
@@ -213,3 +214,16 @@ zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 compinit
 
+
+export FZF_DEFAULT_COMMAND='fdfind -tf --strip-cwd-prefix --follow'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'tree -C {}'"
+export FZF_DEFAULT_OPTS="--height 40% --tmux bottom,40% --info inline --border top \
+    --preview-window right,3,hidden \
+    --bind 'ctrl-y:execute-silent(copyq copy {} & copyq add {})+abort'
+    --bind 'ctrl-/:change-preview-window(50%|hidden|)' --preview 'bat --color=always {}' \
+    --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)' \
+    --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)'"
+source <(fzf --zsh)
