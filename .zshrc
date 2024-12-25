@@ -208,6 +208,7 @@ alias lan="python /home/saniter/Programing/VscodeProject/lanraragi/my_script/tel
 alias arc="aria2c -x 16 -s 16 -k 1M -j 16"
 alias cur="curl -sSL#O"
 
+alias addpwd="copyq add `pwd` && echo 'added:`pwd`'"
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
