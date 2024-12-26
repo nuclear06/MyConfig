@@ -214,6 +214,7 @@ alias cur="curl -sSL#O"
 
 alias addpwd="copyq add `pwd` && echo 'added:`pwd`'"
 
+alias yadmu="yadm add -u && yadm commit -m 'update' && yadm status"
 # autoload -Uz compinit
 # zstyle ':completion:*' menu select
 # fpath+=~/.zfunc
