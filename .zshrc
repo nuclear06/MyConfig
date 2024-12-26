@@ -165,10 +165,12 @@ export PATH=${JAVA_HOME}/bin:$PATH
 export CUDA_VISIBLE_DEVICES=0
 export PATH=/usr/local/cuda-11.7/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH	# cuda
-export PATH=/home/saniter/Programing/maven/apache-maven-3.9.6/bin/:$PATH # maven bin
+export PATH=/home/saniter/Programing/maven/apache-maven-3.9.6/bin:$PATH # maven bin
 export PATH=/home/saniter/.yarn/bin:${PATH}	# yarn
 export PATH=/home/saniter/.local/share/JetBrains/Toolbox/scripts:$PATH	# Jetbrains Idea
 export PATH=/usr/local/go/bin:$PATH
+
+# GO
 export GO111MODULE=auto
 export GOPROXY="https://goproxy.io,https://mirrors.aliyun.com/goproxy/,direct"
 export GOSUMDB="sum.golang.org"
@@ -176,13 +178,14 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
+# Node.js
 export PATH=/usr/local/Node.js/node-v18.18.2-linux-x64/bin:$PATH
+
+
 alias cls=clear
 alias e="eza -F --group-directories-first --icons --sort=changed -r"
 alias ez="eza -F --group-directories-first -l -h --icons -a --sort=changed -r"
 
-# alias for walk
-alias lk="lk --icons"
 alias fd=fdfind
 alias b=byobu
 alias har=harlequin
@@ -195,6 +198,7 @@ export https_proxy="http://127.0.0.1:9220"
 export PATH="$PATH:/home/saniter/.local/bin"
 alias lz='lazydocker'
 alias lg='lazygit'
+alias nv='nvim'
 
 alias sudo='sudo ' # fix sudo alias
 alias sduo='sudo ' 
@@ -210,10 +214,10 @@ alias cur="curl -sSL#O"
 
 alias addpwd="copyq add `pwd` && echo 'added:`pwd`'"
 
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-fpath+=~/.zfunc
-compinit
+# autoload -Uz compinit
+# zstyle ':completion:*' menu select
+# fpath+=~/.zfunc
+# compinit
 
 
 export FZF_DEFAULT_COMMAND='fdfind -tf --strip-cwd-prefix --follow'
