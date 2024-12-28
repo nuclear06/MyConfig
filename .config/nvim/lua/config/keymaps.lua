@@ -4,3 +4,4 @@
 vim.keymap.set({ "n", "v", "x", "o" }, "<C-A-l>", function()
   LazyVim.format({ force = true })
 end)
+vim.keymap.set("i", ";;", "<ESC>", { desc = "Normal mode" })
