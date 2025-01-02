@@ -1,0 +1,12 @@
+{
+  "int_array": {
+    "prefix": "arr",
+    "body": "${1:int}[] ${2:arr} = new ${1:int}[${3:n}];",
+    "description": "Single-dimensional array declaration with variable type"
+  },
+  "int_2d_array": {
+    "prefix": "arrr",
+    "body": "${1:int}[][] ${2:arr} = new ${1:int}[${3:n}][${4:n}];",
+    "description": "Two-dimensional array declaration with variable type"
+  }
+}

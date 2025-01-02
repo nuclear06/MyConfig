@@ -199,6 +199,7 @@ export PATH="$PATH:/home/saniter/.local/bin"
 alias lz='lazydocker'
 alias lg='lazygit'
 alias nv='nvim'
+alias nvl='nvim leetcode.nvim'
 
 alias sudo='sudo ' # fix sudo alias
 alias sduo='sudo ' 
@@ -212,7 +213,8 @@ alias lan="python /home/saniter/Programing/VscodeProject/lanraragi/my_script/tel
 alias arc="aria2c -x 16 -s 16 -k 1M -j 16"
 alias cur="curl -sSL#O"
 
-alias addpwd="copyq add `pwd` && echo 'added:`pwd`'"
+
+alias getpwd="copyq add `pwd` && echo 'added:`pwd`'"
 
 alias yadmu="yadm add -u && yadm commit -m 'update' && yadm status"
 # autoload -Uz compinit
