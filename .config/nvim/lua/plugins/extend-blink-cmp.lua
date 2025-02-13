@@ -101,7 +101,7 @@ return {
         -- this source will check ~/.config/nvim/snippets for custom snippets
         -- only support vscode stlye snippets
         snippets = {
-          enabled = false,
+          -- enabled = false,
           name = "snippets",
           module = "blink.cmp.sources.snippets",
           score_offset = 910,
@@ -127,7 +127,7 @@ return {
     },
 
     keymap = {
-      preset = "super-tab",
+      preset = "enter",
       ["<C-e>"] = { "select_prev", "fallback" },
       ["<C-n>"] = { "select_next", "fallback" },
       ["<C-p>"] = {
