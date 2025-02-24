@@ -120,6 +120,7 @@ plugins=(
     autojump
     zsh-syntax-highlighting
     thefuck
+    direnv
     extract
     systemd
 )
@@ -235,3 +236,4 @@ export FZF_DEFAULT_OPTS="--height 40% --tmux bottom,40% --info inline --border t
     --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)' \
     --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)'"
 source <(fzf --zsh)
+source $HOME/.cargo/env
