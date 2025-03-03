@@ -61,7 +61,7 @@ return {
       documentation = {
         window = { border = "single" },
         auto_show = true,
-        auto_show_delay_ms = 200,
+        auto_show_delay_ms = 800,
       },
       ghost_text = {
         enabled = vim.g.ai_cmp,
@@ -70,8 +70,8 @@ return {
 
     -- experimental signature help support
     signature = {
-      enabled = true,
-      -- window = { border = "single" },
+      enabled = false,
+      window = { border = "single" },
     },
 
     sources = {
