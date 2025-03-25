@@ -1,8 +1,21 @@
 return {
   "mfussenegger/nvim-jdtls",
-  opts =  {
+  opts = {
     settings = {
       java = {
+        SaveActions = {
+          organizeImports = true,
+        },
+        implementationsCodeLens = {
+          enabled = true,
+        },
+        referencesCodeLens = {
+          enabled = true,
+        },
+        signatureHelp = {
+          enabled = true,
+        },
+
         inlayHints = {
           parameterNames = {
             enabled = "all",
@@ -16,9 +29,8 @@ return {
           implementationsCodeLens = {
             enabled = true,
           },
-
         },
       },
     },
-  }
+  },
 }

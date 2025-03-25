@@ -4,10 +4,14 @@ return {
     codelens = {
       enabled = true
     },
-    settings = {
-      Lua = {
-        codelens = {
-          enable = false
+    servers = {
+      lua_ls = {
+        settings = {
+          Lua = {
+            codeLens = {
+              enable = false,
+            }
+          }
         }
       }
     }

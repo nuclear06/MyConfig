@@ -1,5 +1,6 @@
 return {
   "saghen/blink.cmp",
+  version = "0.13.1",
   dependencies = {
     "moyiz/blink-emoji.nvim",
   },
@@ -20,22 +21,32 @@ return {
           enabled = true,
         },
       },
+      list = {
+        selection = {
+          preselect = true,
+          auto_insert = false,
+        },
+      },
       menu = {
         -- border = "single",
         draw = {
-          treesitter = { "lsp" },
+          -- treesitter = { "lsp" },
           columns = {
             { "item_idx" },
             { "kind_icon" },
-            { "label", "label_description", gap = 1 },
-            { "completion_type" },
+            -- We don't need label_description now because label and label_description are already
+            -- combined together in label by colorful-menu.nvim.
+            { "label", gap = 1 },
+            { "kind" },
           },
           components = {
-            completion_type = { -- 新增补全类型组件
+            label = {
               text = function(ctx)
-                return string.format("<%s>", ctx.kind or "Unknown")
+                return require("colorful-menu").blink_components_text(ctx)
               end,
-              highlight = "BlinkCmpItemType", -- 可选，为补全类型定义高亮
+              highlight = function(ctx)
+                return require("colorful-menu").blink_components_highlight(ctx)
+              end,
             },
             kind_icon = {
               ellipsis = false,
@@ -49,6 +60,7 @@ return {
                 return hl
               end,
             },
+
             item_idx = {
               text = function(ctx)
                 return ctx.idx == 10 and "0" or ctx.idx >= 10 and " " or tostring(ctx.idx)
@@ -61,16 +73,15 @@ return {
       documentation = {
         window = { border = "single" },
         auto_show = true,
-        auto_show_delay_ms = 800,
+        auto_show_delay_ms = 200,
       },
       ghost_text = {
         enabled = vim.g.ai_cmp,
       },
     },
 
-    -- experimental signature help support
     signature = {
-      enabled = false,
+      enabled = true,
       window = { border = "single" },
     },
 
@@ -78,7 +89,7 @@ return {
       -- adding any nvim-cmp sources here will enable them
       -- with blink.compat
       compat = {},
-      default = { "emoji", "lsp", "path", "snippets", "buffer", "copilot", "luasnip" },
+      default = { "emoji", "lsp", "path", "snippets", "buffer", "copilot" },
       providers = {
         emoji = {
           module = "blink-emoji",
@@ -88,15 +99,7 @@ return {
         lsp = {
           name = "lsp",
           module = "blink.cmp.sources.lsp",
-          kind = "LSP",
           score_offset = 900,
-        },
-        luasnip = {
-          name = "luasnip",
-          module = "blink.cmp.sources.luasnip",
-          score_offset = 800,
-          min_keyword_length = 2,
-          max_items = 4,
         },
         -- this source will check ~/.config/nvim/snippets for custom snippets
         -- only support vscode stlye snippets
@@ -123,9 +126,10 @@ return {
           score_offset = 10,
         },
       },
-      cmdline = {},
     },
-
+    cmdline = {
+      enabled = false,
+    },
     keymap = {
       preset = "enter",
       ["<C-e>"] = { "select_prev", "fallback" },

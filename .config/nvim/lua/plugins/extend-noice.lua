@@ -1,8 +1,13 @@
 return {
   "folke/noice.nvim",
-    opts = {
-      presets = {
-        lsp_doc_border = true,
+  opts = {
+    lsp = {
+      signature = {
+        enabled = false,
       },
     },
+    -- presets = {
+    --   lsp_doc_border = true,
+    -- },
+  },
 }

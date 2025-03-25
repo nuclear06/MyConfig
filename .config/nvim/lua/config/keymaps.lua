@@ -5,11 +5,35 @@ vim.keymap.set({ "n", "v", "x", "o" }, "<A-l>", function()
   LazyVim.format({ force = true })
 end)
 
+local map = vim.keymap.set
 local wk = require("which-key")
+
+-- auto indent on empty lines
+local function smart_insert()
+  local current_line = vim.api.nvim_get_current_line()
+  local current_linenr = vim.fn.line(".")
+  local last_linenr = vim.fn.line("$")
+  -- local col = vim.fn.wincol();
+
+  -- 检查是否为空行（允许空白字符）且非最后一行
+  if current_line:match("^%s*$") and current_linenr ~= last_linenr then
+    vim.api.nvim_feedkeys("ddO", "n", true)
+  else
+    vim.api.nvim_feedkeys("i", "n", true)
+  end
+end
+
+vim.keymap.set("n", "i", smart_insert, {
+  noremap = true,
+  silent = true,
+  desc = "Smart insert with auto-indent on empty lines",
+})
+
+map("n", "cc", "_C")
+
 local cmd = function(command)
   return "<Esc><Cmd>" .. command .. "<CR>"
 end
-
 wk.add({
   { "<leader>dd", cmd([[lua require'dap'.continue()]]), desc = "Start" },
   { "<F1>", cmd([[lua require'dap'.continue()]]), desc = "Start" },
